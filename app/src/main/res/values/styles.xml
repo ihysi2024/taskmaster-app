@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Custom text appearance style for TabLayout tabs -->
+    <style name="CustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:fontFamily">@font/font_family</item> <!-- Reference to your font family XML -->
+        <item name="android:textSize">20sp</item> <!-- Example text size -->
+        <item name="android:textStyle">bold</item> <!-- Example text style -->
+        <item name="android:textColor">@color/opaque_purple</item> <!-- Example text color -->
+    </style>
+
+</resources>
