@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tracker.TrackerFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tasksLeftTitleFirst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_below="@id/title"
+            android:text="You Have"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            android:textSize="60dp"
+            android:gravity="center"
+            android:fontFamily="@font/font_family"/>
+
+        <TextView
+            android:id="@+id/tasksLeft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:text="6"
+            android:textStyle="bold"
+            android:textColor="@color/opaque_purple"
+            android:textSize="100dp"
+            android:gravity="center"
+            android:fontFamily="@font/font_family"/>
+
+        <TextView
+            android:id="@+id/tasksLeftTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:text="tasks left"
+            android:textColor="@color/black"
+            android:textSize="60dp"
+            android:paddingBottom="10dp"
+            android:gravity="center"
+            android:fontFamily="@font/font_family"/>
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/good_progress"
+            android:scaleX="6"
+            android:scaleY="6"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/prog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_below="@id/title"
+            android:text="You Are At"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            android:textSize="40dp"
+            android:paddingTop="35dp"
+            android:gravity="center"
+            android:fontFamily="@font/font_family"/>
+
+        <TextView
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_below="@id/title"
+            android:text="Peak Productivity"
+            android:textColor="@color/opaque_purple"
+            android:textStyle="bold"
+            android:textSize="55dp"
+            android:gravity="center"
+            android:fontFamily="@font/font_family"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>
