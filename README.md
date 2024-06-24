@@ -1,10 +1,13 @@
-FINAL PROJECT PROTOTYPE This program is a productivity app that allows users to track their upcoming tasks and productivity levels to encourage user efficiency in their daily life.
+FINAL PROJECT PROTOTYPE
+This program is a productivity app that allows users to track their upcoming tasks and productivity levels to encourage user efficiency in their daily life.
 
-PROGRAM SPECIFICATIONS The following program uses Firebase email/password authentication to allow users to register an account with the system. The program will also connect to the Calendar Provider API in the Android OS to allow users to add events to their calendar and filter events by those occurring in the week selected.
+PROGRAM SPECIFICATIONS
+The following program uses Firebase email/password authentication to allow users to register an account with the system. The program will also connect to the Calendar Provider API in the Android OS to allow users to add events to their calendar and filter events by those occurring in the week selected.
 
 The program was tested on Nexus 5X API 34 virtual device by running FinalProjectPrototype.app.main in the run configurations.
 
-PROGRAM WORKFLOW Users can register an account with the system using a unique email and password combination that is stored in the Firestore Firebase and can then login to the system with that combination.
+PROGRAM WORKFLOW
+Users can register an account with the system using a unique email and password combination that is stored in the Firestore Firebase and can then login to the system with that combination.
 
 The background services includes notifying the user of the tasks on their list due the day they logged into the program.
 
