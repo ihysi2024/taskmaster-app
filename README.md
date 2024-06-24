@@ -14,6 +14,6 @@ The calendar tab allows the events to visualized in the calendar and selecting a
 
 The tracker tab will track the number of tasks left in the week to be completed. Depending on the percent of tasks that the user has completed, the user will be told they are achieving peak productivity, medium productivity, or low productivity, and there will be an image displayed to reaffirm this productivity level. The productivity tracker is based on the number of completed tasks over the total tasks created for the week. When a user has completed all available tasks, this tally is reset. The following demonstrates the productivity markers and what percent of total tasks completed result in various productivity levels.
 
-greater than 75%: "Peak Productivity", check mark
-between 25% and 75%: "Good Productivity", pending progress
-less than 25%: "Low Productivity", "X" mark
+- greater than 75%: "Peak Productivity", check mark
+- between 25% and 75%: "Good Productivity", pending progress
+- less than 25%: "Low Productivity", "X" mark
