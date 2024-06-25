@@ -652,7 +652,7 @@ public class TasksFragment extends Fragment {
         tasksAdapter.notifyDataSetChanged();
     }
 
-    private class TaskNotifs extends AsyncTask<Void, Void, ArrayList<String>> {
+   private class TaskNotifs extends AsyncTask<Void, Void, ArrayList<String>> {
 
         @Override
         protected ArrayList<String> doInBackground(Void... voids) {
@@ -662,18 +662,20 @@ public class TasksFragment extends Fragment {
                         @Override
                         public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                             for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
-                                Calendar calendar = Calendar.getInstance();
-
                                 Timestamp ts = (Timestamp) document.getData().get("dueDate");
                                 long seconds = ts.getSeconds();
-                                int nanoseconds = ts.getNanoseconds(); // Example nanoseconds part
+                                int nanoseconds = ts.getNanoseconds();
 
                                 // Convert the timestamp to milliseconds
                                 long milliseconds = (seconds * 1000) + (nanoseconds / 1000000);
                                 Calendar calendarFromTimestamp = Calendar.getInstance();
                                 calendarFromTimestamp.setTimeInMillis(milliseconds);
-                                calendarFromTimestamp.setTimeZone(TimeZone.getTimeZone("UTC"));
 
+                                // Get the current date for comparison
+                                Calendar calendar = Calendar.getInstance();
+
+                                Log.d("ASS", String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)));
+                                Log.d("ASS", String.valueOf(calendarFromTimestamp.get(Calendar.DAY_OF_MONTH)));
                                 boolean sameDay = isSameDay(calendar, calendarFromTimestamp);
                                 if (sameDay) {
                                     dueToday.add(document.getData().get("name").toString());
@@ -682,11 +684,13 @@ public class TasksFragment extends Fragment {
                             String alertMessage = "";
 
                             if (dueToday.size() > 0) {
-
+                                Log.d("HERE", String.valueOf(dueToday.size()));
                                 for (String msg: dueToday) {
                                     alertMessage = alertMessage + msg + "\n";
                                 }
                                 AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                                builder.setTitle("Attention!");
+                                builder.setMessage(alertMessage);
                                 AlertDialog dialog = builder.create();
                                 dialog.show();
                             }
